@@ -19,4 +19,16 @@ export class AuthService {
             }
         })
     }
+
+    register(data:any){
+        return this.http.post(this.api.getUrlRegister(),{
+            email:data.email,
+            password:data.password,
+            username:data.username
+        },{
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+    }
 }

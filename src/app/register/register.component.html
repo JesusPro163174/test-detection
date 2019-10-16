@@ -1,1 +1,12 @@
-<p>register works!</p>
+<form action="" class="large-padding top-space">
+    <input type="text" [(ngModel)]="data.username" name="username" placeholder="Nombre de usuario"
+        class="form-control">
+    <input type="email" [(ngModel)]="data.email" name="email" placeholder="Correo electronico" class="form-control">
+    <input type="password" [(ngModel)]="data.password" name="password" placeholder="Password" class="form-control">
+    <div class="top-space">
+        <button (click)="register()" class="btn blue light-text full-width">Registrarse</button>
+    </div>
+    <div class="top-space">
+        <button routerLink="/login" class="btn blue light-text full-width">Acceder</button>
+    </div>
+</form>
